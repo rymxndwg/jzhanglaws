@@ -1,0 +1,75 @@
+.footer {
+    height: 150px;
+    background-color: rgb(150, 38, 38);
+    box-shadow: -5px 0px 10px rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-sub {
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-width: 0px 1px 0px 0px;
+    border-style: solid;
+    border-color: white;
+    gap: 10px;
+    color: white;
+}
+
+.footer-sub p {
+    text-align: center;
+}
+
+.favicon {
+    font-size: 30px;
+}
+
+@media (max-width: 850px) {
+    .footer {
+        height: 550px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .footer-sub {
+        border-width: 0px 0px 1px 0px;
+    }
+}
+
+/* IPhone 14 */
+@media only screen and (max-device-width: 430px) and (max-device-height: 932px) {
+    .footer {
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .footer-sub {
+        border-width: 0px 0px 1px 0px;
+    }
+
+    .footer-sub p{
+        font-size: 30px;
+    }
+}
+
+/* IPhone X */
+@media only screen and (max-device-width: 375px) and (max-device-height: 812px) {
+}
+
+/* IPhone 6/7/8 Plus */
+@media only screen and (max-device-width: 414px) and (max-device-height: 736px) {
+}
+
+/* IPhone 6/7/8 */
+@media only screen and (max-device-width: 375px) and (max-device-height: 667px) {
+}
+
+/* IPhone 4 */
+@media only screen and (max-device-width: 320px) {
+}

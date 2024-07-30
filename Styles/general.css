@@ -1,0 +1,27 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(245, 245, 247);
+    font-family: "Libre Baskerville";
+    min-width: 650px;
+}
+
+
+p {
+    font-family: "Libre Baskerville";
+    margin: 0px;
+    padding: 0px;
+}
+
+h2 {
+  font-family: "Roboto";
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

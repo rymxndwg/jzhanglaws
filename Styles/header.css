@@ -1,0 +1,484 @@
+.header {
+    height: 150px;
+    background-color: rgb(245, 245, 247);
+    box-shadow: 0px 5px 10px rgba(26, 25, 25, 0.5);
+    z-index: 100;
+    position:relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.header-left {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.home-logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-chinese-text {
+    color: rgb(150, 38, 38);
+    letter-spacing: 10px;
+}
+
+.header-mid {
+    flex-grow: 4;
+    padding-right: 2vw;
+    display: flex;
+    flex-direction: row;
+    padding-left: 15vw;
+    padding-right: 25px;
+    justify-content: flex-end;
+    column-gap: 5vw;
+}
+
+.header-right {
+    width: 250px;
+    display: flex;
+    justify-content: center;
+}
+
+.language-container {
+    width: 200px;
+    height: 100px;
+    background-color: rgb(245, 245, 247);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.button {
+    background-color: #d2d2d2;
+    width: 150px;
+    height: 45px;
+    border-radius: 150px;
+    cursor: pointer;
+    position: relative;
+}
+
+.button::before {
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    width: 90px;
+    height: 45px;
+    border-radius: 150px;
+    margin: 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.english-txt, .chinese-txt {
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+    user-select: none;
+}
+
+.english-txt {
+    left: 37px;
+}
+
+.chinese-txt {
+    right: 39px;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked + .button::before {
+    width: 60px;
+    transform: translateX(90px);
+}
+
+.main-selector {
+    color: rgb(150, 38, 38);
+    font-weight: 700;
+}
+
+.header-link {
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.header-link:hover {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.hamburger-img {
+    display: none;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    z-index: 150;
+}
+
+.menu {
+    background-color: rgb(245, 245, 247);
+    height: 100vh;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    right: -50vw;
+    text-align: center;
+    font-size: 30px;
+    transition: .5s ease;
+    z-index: 700;
+}
+
+.ham-x {
+    height: 80px;
+    width: 80px;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: auto;
+    position: relative;
+}
+
+.ham-x span {
+    height: 2px;
+    width: 40%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 200;
+    transition: 0.2s;
+}
+
+.ham-x:hover {
+    span {
+        background-color: rgb(150, 38, 38);
+        height: 3px;
+    }
+
+    cursor: pointer;
+}
+
+
+.ham-x span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-x span:nth-child(2) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.menu.active {
+    right: 0;
+}
+
+.menu-outside {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    opacity: 0;
+    background-color: black;
+    position: fixed;
+    transition: 0.5s ease;
+    z-index: -5;
+}
+
+.menu-outside.active {
+    opacity: 0.5;
+    z-index: 500;
+}
+
+.menu-main-section {
+    color: rgb(150, 38, 38);
+}
+
+.menu-section {
+    font-size: 25px;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 70px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.menu-section:hover {
+    scale: 1.1;
+}
+
+.language-container-sidebar {
+    padding-left: 40px;
+    width: 200px;
+    height: 100px;
+    background-color: rgb(245, 245, 247);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.button-sidebar {
+    background-color: #d2d2d2;
+    width: 170px;
+    height: 45px;
+    border-radius: 150px;
+    cursor: pointer;
+    position: relative;
+}
+
+.button-sidebar::before {
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    width: 110px;
+    height: 45px;
+    border-radius: 150px;
+    margin: 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.english-txt-sidebar, .chinese-txt-sidebar {
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+    user-select: none;
+    font-size: 20px;
+}
+
+.english-txt-sidebar {
+    left: 70px;
+}
+
+.chinese-txt-sidebar {
+    right: 30px;
+}
+
+
+#check-sidebar {
+    display: none;
+}
+
+#check-sidebar:checked + .button-sidebar::before {
+    width: 70px;
+    transform: translateX(100px);
+}
+
+@media (max-width: 1580px) {
+    .header-mid {
+        padding-left: 3vw;
+    }
+
+    .header-right {
+        width: 250px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1350px) {
+    .header-right {
+        display: none;
+    }
+
+    .hamburger-img {
+        display: block;
+        cursor: pointer;
+    }
+
+    .sidebar-menu:hover .menu {
+        display: block;
+    }
+    
+    .hamburger-img:hover {
+        cursor: pointer;
+    }
+
+    .header-link {
+        display: none;
+    }
+}
+
+@media (max-width: 1020px) {
+}
+
+@media (max-width: 700px) {
+    .menu {
+        background-color: rgb(245, 245, 247);
+        height: 100vh;
+        width: 300px;
+        position: fixed;
+        top: 0;
+        right: -60vw;
+    }
+    
+}
+
+/* IPhone 14 */
+@media only screen and (max-device-width: 430px) and (max-device-height: 932px) {
+    .header {
+        height: 350px;
+        font-size: 30px;
+    }
+    .header-left {
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .header-left img {
+        height: 150px;
+        width: 150px;
+    }
+
+    .hamburger-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .header-right {
+        display: none;
+    }
+
+    .menu {
+        width: 400px;
+    }
+    
+    .ham-x {
+        height: 100px;
+        width: 100px;
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-left: auto;
+        position: relative;
+    }
+    
+    .ham-x span {
+        height: 2px;
+        width: 50%;
+        background-color: rgb(0, 0, 0);
+        border-radius: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 200;
+        transition: 0.2s;
+    }
+    
+    .menu-section {
+        font-size: 40px;
+        height: 150px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 70px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    
+    .menu-section:hover {
+        scale: 1.1;
+    }
+    
+    .language-container-sidebar {
+        padding-left: 40px;
+        width: 300px;
+        height: 100px;
+        background-color: rgb(245, 245, 247);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .button-sidebar {
+        background-color: #d2d2d2;
+        width: 300px;
+        height: 60px;
+        border-radius: 150px;
+        cursor: pointer;
+        position: relative;
+    }
+    
+    .button-sidebar::before {
+        position: absolute;
+        content: '';
+        background-color: #fff;
+        width: 200px;
+        height: 60px;
+        border-radius: 150px;
+        margin: 0px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        transition: 0.5s;
+    }
+    
+    .english-txt-sidebar, .chinese-txt-sidebar {
+        position: absolute;
+        z-index: 100;
+        cursor: pointer;
+        user-select: none;
+        font-size: 35px;
+    }
+    
+    .english-txt-sidebar {
+        left: 70px;
+    }
+    
+    .chinese-txt-sidebar {
+        right: 30px;
+    }
+    
+    
+    #check-sidebar {
+        display: none;
+    }
+    
+    #check-sidebar:checked + .button-sidebar::before {
+        width: 120px;
+        transform: translateX(180px);
+    }
+}
+
+/* IPhone X */
+@media only screen and (max-device-width: 375px) and (max-device-height: 812px) {
+}
+
+/* IPhone 6/7/8 Plus */
+@media only screen and (max-device-width: 414px) and (max-device-height: 736px) {
+}
+
+/* IPhone 6/7/8 */
+@media only screen and (max-device-width: 375px) and (max-device-height: 667px) {
+}
+
+/* IPhone 4 */
+@media only screen and (max-device-width: 320px) {
+}

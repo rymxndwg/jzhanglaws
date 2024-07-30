@@ -1,0 +1,92 @@
+.service, .contact-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.service-title, .contact-us-title  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 70vw;
+}
+
+.service-title h2, .contact-us-title h2 {
+    font-size: 35px;
+    color: rgb(150, 38, 38);
+    margin-right: 1vw;
+}
+
+.sec-border {
+    flex-grow: 1;
+    height: 35px;
+    background-color: rgb(150, 38, 38);
+}
+
+.service-body {
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+}
+
+.article-template {
+    padding-top: 50px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    line-height: 40px;
+    font-size: 18px;
+}
+
+.article-title {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Roboto";
+    margin: 0px;
+}
+
+.profile-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 15px;
+}
+
+.profile-pic {
+    width: 50px; /* Set width */
+    height: 50px; /* Set height */
+    object-fit: cover; /* or contain, fill, etc. */
+    border-radius: 50%;
+}
+
+.read-time, .dot, .publish-date {
+    color: gray;
+}
+
+.article-info {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+}
+
+.writer-info {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.article-img {
+    max-width: 800px;
+    object-fit: cover;
+}
+
+.chapter-head {
+    font-weight: bold;
+    font-size: 30px;
+    font-family: "Roboto";
+}
+
