@@ -1,3 +1,5 @@
+import { getLanguage } from './language-handler.js';
+
 //Get HTML Elements
 const flushingMap = document.querySelector('.flushing-map');
 const tangramMap = document.querySelector('.tangram-map');
@@ -8,6 +10,13 @@ const midDot = document.querySelector('.mid-dot');
 const rightDot = document.querySelector('.right-dot');
 const rightArrow = document.querySelector('.right-arrow');
 const curLocationText = document.querySelector('.cur-location');
+const languageContainer = document.querySelector('.language-container');
+const englishBtn = document.querySelector('.english-txt');
+const chineseBtn = document.querySelector('.chinese-txt');
+const sidebarLanguageContainer = document.querySelector('.language-container-sidebar');
+const sidebarEnglishBtn = document.querySelector('.english-txt-sidebar');
+const sidebarChineseBtn = document.querySelector('.chinese-txt-sidebar');
+
 
 //Set Initial Elements
 tangramMap.classList.toggle('active');
@@ -22,7 +31,12 @@ leftArrow.addEventListener('click', ()=> {
     if (curLocation == 'left') {
         curLocation = 'right';
 
-        curLocationText.innerHTML = 'Manhattan';
+        if (getLanguage() == 'English') {
+            curLocationText.innerHTML = 'Manhattan';
+        }
+        else {
+            curLocationText.innerHTML = '曼哈顿';
+        }
 
         rightDot.innerHTML = activeDotHtml;
         midDot.innerHTML = inactiveDotHtml;
@@ -34,7 +48,12 @@ leftArrow.addEventListener('click', ()=> {
     } else if (curLocation == 'mid') {
         curLocation = 'left';
 
-        curLocationText.innerHTML = 'Flushing';
+        if (getLanguage() == 'English') {
+            curLocationText.innerHTML = 'Flushing';
+        }
+        else {
+            curLocationText.innerHTML = '法拉盛';
+        }
 
         leftDot.innerHTML = activeDotHtml;
         midDot.innerHTML = inactiveDotHtml;
@@ -46,7 +65,12 @@ leftArrow.addEventListener('click', ()=> {
     } else {
         curLocation = 'mid';
 
-        curLocationText.innerHTML = 'Tangram';
+        if (getLanguage() == 'English') {
+            curLocationText.innerHTML = 'Tangram';
+        }
+        else {
+            curLocationText.innerHTML = '七巧板';
+        }
 
         midDot.innerHTML = activeDotHtml;
         leftDot.innerHTML = inactiveDotHtml;
@@ -62,7 +86,12 @@ leftArrow.addEventListener('click', ()=> {
 leftDot.addEventListener('click', ()=> {
     curLocation = 'left';
 
-    curLocationText.innerHTML = 'Flushing';
+    if (getLanguage() == 'English') {
+        curLocationText.innerHTML = 'Flushing';
+    }
+    else {
+        curLocationText.innerHTML = '法拉盛';
+    }
 
     leftDot.innerHTML = activeDotHtml;
     midDot.innerHTML = inactiveDotHtml;
@@ -77,7 +106,12 @@ leftDot.addEventListener('click', ()=> {
 midDot.addEventListener('click', ()=> {
     curLocation = 'mid';
 
-    curLocationText.innerHTML = 'Tangram';
+    if (getLanguage() == 'English') {
+        curLocationText.innerHTML = 'Tangram';
+    }
+    else {
+        curLocationText.innerHTML = '七巧板';
+    }
 
     midDot.innerHTML = activeDotHtml;
     leftDot.innerHTML = inactiveDotHtml;
@@ -92,7 +126,12 @@ midDot.addEventListener('click', ()=> {
 rightDot.addEventListener('click', ()=> {
     curLocation = 'right';
 
-    curLocationText.innerHTML = 'Manhattan';
+    if (getLanguage() == 'English') {
+        curLocationText.innerHTML = 'Manhattan';
+    }
+    else {
+        curLocationText.innerHTML = '曼哈顿';
+    }
 
     rightDot.innerHTML = activeDotHtml;
     leftDot.innerHTML = inactiveDotHtml;
@@ -108,7 +147,13 @@ rightArrow.addEventListener('click', ()=> {
     if (curLocation == 'left') {
         curLocation = 'mid';
 
-        curLocationText.innerHTML = 'Tangram';
+        if (getLanguage() == 'English') {
+            curLocationText.innerHTML = 'Tangram';
+        }
+        else {
+            curLocationText.innerHTML = '七巧板';
+        }
+    
 
         midDot.innerHTML = activeDotHtml;
         leftDot.innerHTML = inactiveDotHtml;
@@ -120,7 +165,12 @@ rightArrow.addEventListener('click', ()=> {
     } else if (curLocation == 'mid') {
         curLocation = 'right';
 
-        curLocationText.innerHTML = 'Manhattan';
+        if (getLanguage() == 'English') {
+            curLocationText.innerHTML = 'Manhattan';
+        }
+        else {
+            curLocationText.innerHTML = '曼哈顿';
+        }
 
         rightDot.innerHTML = activeDotHtml;
         leftDot.innerHTML = inactiveDotHtml;
@@ -132,7 +182,12 @@ rightArrow.addEventListener('click', ()=> {
     } else {
         curLocation = 'left';
 
-        curLocationText.innerHTML = 'Flushing';
+        if (getLanguage() == 'English') {
+            curLocationText.innerHTML = 'Flushing';
+        }
+        else {
+            curLocationText.innerHTML = '法拉盛';
+        }
 
         leftDot.innerHTML = activeDotHtml;
         rightDot.innerHTML = inactiveDotHtml;
@@ -144,3 +199,53 @@ rightArrow.addEventListener('click', ()=> {
     }
 });
 
+
+function languageController() {
+    if (curLocation == 'Flushing') {
+        if (getLanguage() == 'English') {
+            curLocationText.innerHTML = 'Flushing';
+        }
+        else {
+            curLocationText.innerHTML = '法拉盛';
+        }
+    } else if (curLocation == 'Manhattan') {
+        if (getLanguage() == 'English') {
+            curLocationText.innerHTML = 'Manhattan';
+        }
+        else {
+            curLocationText.innerHTML = '曼哈顿';
+        }
+    } else {
+        if (getLanguage() == 'English') {
+            curLocationText.innerHTML = 'Tangram';
+        }
+        else {
+            curLocationText.innerHTML = '七巧板';
+        }    
+    }
+}
+
+languageContainer.addEventListener("change", (event)=> {
+    languageController();
+});
+
+englishBtn.addEventListener("click", ()=> {
+    languageController();
+});
+
+chineseBtn.addEventListener("click", ()=> {
+    languageController();
+});
+
+sidebarLanguageContainer.addEventListener("change", (event)=> {
+    languageController();
+});
+
+
+sidebarEnglishBtn.addEventListener("click", ()=> {
+    languageController();
+});
+
+sidebarChineseBtn.addEventListener("click", ()=> {
+    languageController();
+});

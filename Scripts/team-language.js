@@ -1,8 +1,8 @@
 export function loadTeamChinese() {
-    document.querySelector('.service-title h2').innerHTML = '我们的队伍';
-    document.querySelector('.service-text p:nth-child(1)').innerHTML = '作为一支由经验丰富的律师和具有多元文化背景的支持人员组成的团队，我们拥有为您提供针对性解决方案所需的知识和技能，我们的目标是提供及时、具有成本效益和高质量的法律服务。';
-    document.querySelector('.service-text p:nth-child(2)').innerHTML = '客户的需求始终是我们的首要任务。我们随时为您提供帮助！张济源先生是张济源律师事务所的创始人兼执行律师。';
-    document.querySelector('.service-text p:nth-child(3)').innerHTML = '他是一位知识渊博、经验丰富、精通中文和英语的杰出律师，专注于移民法、商业法、家庭法、房地产交易、民商事诉讼、知识产权等领域。特性。';
+    document.querySelector('.about-title h2').innerHTML = '我们的队伍';
+    document.querySelector('.about-text p:nth-child(1)').innerHTML = '作为一支由经验丰富的律师和具有多元文化背景的支持人员组成的团队，我们拥有为您提供针对性解决方案所需的知识和技能，我们的目标是提供及时、具有成本效益和高质量的法律服务。';
+    document.querySelector('.about-text p:nth-child(2)').innerHTML = '客户的需求始终是我们的首要任务。我们随时为您提供帮助！张济源先生是张济源律师事务所的创始人兼执行律师。';
+    document.querySelector('.about-text p:nth-child(3)').innerHTML = '他是一位知识渊博、经验丰富、精通中文和英语的杰出律师，专注于移民法、商业法、家庭法、房地产交易、民商事诉讼、知识产权等领域。特性。';
 
     document.querySelector('.js-bar-title').innerHTML = '律师资格';
     document.querySelector('.js-bar-text p:nth-child(1)').innerHTML = '纽约州律师执照';
@@ -39,16 +39,16 @@ export function loadTeamChinese() {
     document.querySelector('.contact-form div:nth-child(5) textarea').placeholder = '信息';
     document.querySelector('.contact-form div:nth-child(6) button').innerHTML = '发送';
 
-    document.querySelector('.location-hours-text').innerHTML = '小时';
-    document.querySelector('.location-second-div p:nth-child(1)').innerHTML = '周一至周五 9:00am - 5:30pm';
-    document.querySelector('.location-see-more').innerHTML = '查看更多 &#8594';
+    document.querySelector('.location-hours p:nth-child(1)').innerHTML = '小时';
+    document.querySelector('.location-hours p:nth-child(2)').innerHTML = '周一至周五 9:00am - 5:30pm';
+    document.querySelector('.location-info p:nth-child(1)').innerHTML = '地点';
 }
 
 export function loadTeamEnglish() {
-    document.querySelector('.service-title h2').innerHTML = 'Our Team';
-    document.querySelector('.service-text p:nth-child(1)').innerHTML = 'As a team of experienced attorneys and supporting staffs with multicultural background, we have the knowledge and skills necessary to provide you with focused solutions, and we are aiming to deliver timely, cost-effective, and high-quality legal services.';
-    document.querySelector('.service-text p:nth-child(2)').innerHTML = "Our clients' needs are always our top priority. We are here to help! Jiyuan (Jerry) Zhang Esq is the Founder & Managing Attorney at J. Zhang Law Firm.";
-    document.querySelector('.service-text p:nth-child(3)').innerHTML = 'He is a distinguished attorney with extensive knowledge and experience, fluent in both Mandarin Chinese and English, and he concentrates the practice in the field of immigration law, business-related law, family law, real estate transaction, civil and commercial litigations, and intellectual properties.';
+    document.querySelector('.about-title h2').innerHTML = 'Our Team';
+    document.querySelector('.about-text p:nth-child(1)').innerHTML = 'As a team of experienced attorneys and supporting staffs with multicultural background, we have the knowledge and skills necessary to provide you with focused solutions, and we are aiming to deliver timely, cost-effective, and high-quality legal services.';
+    document.querySelector('.about-text p:nth-child(2)').innerHTML = "Our clients' needs are always our top priority. We are here to help! Jiyuan (Jerry) Zhang Esq is the Founder & Managing Attorney at J. Zhang Law Firm.";
+    document.querySelector('.about-text p:nth-child(3)').innerHTML = 'He is a distinguished attorney with extensive knowledge and experience, fluent in both Mandarin Chinese and English, and he concentrates the practice in the field of immigration law, business-related law, family law, real estate transaction, civil and commercial litigations, and intellectual properties.';
 
     document.querySelector('.js-bar-title').innerHTML = 'BAR ADMISSIONS';
     document.querySelector('.js-bar-text p:nth-child(1)').innerHTML = 'New York State Bar License';
@@ -85,7 +85,7 @@ export function loadTeamEnglish() {
     document.querySelector('.contact-form div:nth-child(5) textarea').placeholder = 'Message';
     document.querySelector('.contact-form div:nth-child(6) button').innerHTML = 'Send';
 
-    document.querySelector('.location-hours-text').innerHTML = 'Hours';
-    document.querySelector('.location-second-div p:nth-child(1)').innerHTML = 'Mon - Fri  9:00am - 5:30pm';
-    document.querySelector('.location-see-more').innerHTML = 'See More &#8594';
+    document.querySelector('.location-hours p:nth-child(1)').innerHTML = 'Hours';
+    document.querySelector('.location-hours p:nth-child(2)').innerHTML = 'Mon - Fri  9:00am - 5:30pm';
+    document.querySelector('.location-info p:nth-child(1)').innerHTML = 'Location';
 }

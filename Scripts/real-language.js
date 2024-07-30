@@ -21,9 +21,9 @@ export function loadRealChinese() {
     document.querySelector('.contact-form div:nth-child(5) textarea').placeholder = '信息';
     document.querySelector('.contact-form div:nth-child(6) button').innerHTML = '发送';
 
-    document.querySelector('.location-hours-text').innerHTML = '小时';
-    document.querySelector('.location-second-div p:nth-child(1)').innerHTML = '周一至周五 9:00am - 5:30pm';
-    document.querySelector('.location-see-more').innerHTML = '查看更多 &#8594';
+    document.querySelector('.location-hours p:nth-child(1)').innerHTML = '小时';
+    document.querySelector('.location-hours p:nth-child(2)').innerHTML = '周一至周五 9:00am - 5:30pm';
+    document.querySelector('.location-info p:nth-child(1)').innerHTML = '地点';
 }
 
 export function loadRealEnglish() {
@@ -50,7 +50,7 @@ export function loadRealEnglish() {
     document.querySelector('.contact-form div:nth-child(5) textarea').placeholder = 'Message';
     document.querySelector('.contact-form div:nth-child(6) button').innerHTML = 'Send';
 
-    document.querySelector('.location-hours-text').innerHTML = 'Hours';
-    document.querySelector('.location-second-div p:nth-child(1)').innerHTML = 'Mon - Fri  9:00am - 5:30pm';
-    document.querySelector('.location-see-more').innerHTML = 'See More &#8594';
+    document.querySelector('.location-hours p:nth-child(1)').innerHTML = 'Hours';
+    document.querySelector('.location-hours p:nth-child(2)').innerHTML = 'Mon - Fri  9:00am - 5:30pm';
+    document.querySelector('.location-info p:nth-child(1)').innerHTML = 'Location';
 }
