@@ -3,7 +3,6 @@ import { getArticleName } from "./article-handler.js";
 import { chineseArticlesDB } from "./chinese-articles-db.js";
 
 export function loadTemplateChinese() {
-    console.log("Called");
     document.querySelector('.service-title h2').innerHTML = '吉张新闻';
 
     //Find Service
