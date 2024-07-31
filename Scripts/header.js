@@ -156,12 +156,12 @@ function languageController(curLanguage) {
     //Get Page Name
     let curPathName = window.location.pathname;
     //Use 12 if on github url, else use 1 for Local Server
-    curPathName = curPathName.slice(12, -5);
+    curPathName = curPathName.slice(1, -5);
 
     if (curLanguage == 'Chinese') {
         loadHeaderChinese();
 
-        if (curPathName == '') {
+        if (curPathName == 'index') {
             loadIndexChinese();
         } else if (curPathName == 'business') {
             loadBusinessChinese();
@@ -189,7 +189,7 @@ function languageController(curLanguage) {
     } else {
         loadHeaderEnglish();
 
-        if (curPathName == '') {
+        if (curPathName == 'index') {
             loadIndexEnglish();
         } else if (curPathName == 'business') {
             loadBusinessEnglish();
