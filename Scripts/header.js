@@ -161,7 +161,7 @@ function languageController(curLanguage) {
     if (curLanguage == 'Chinese') {
         loadHeaderChinese();
 
-        if (curPathName == 'index') {
+        if (curPathName == '') {
             loadIndexChinese();
         } else if (curPathName == 'business') {
             loadBusinessChinese();
@@ -189,7 +189,7 @@ function languageController(curLanguage) {
     } else {
         loadHeaderEnglish();
 
-        if (curPathName == 'index') {
+        if (curPathName == '') {
             loadIndexEnglish();
         } else if (curPathName == 'business') {
             loadBusinessEnglish();
