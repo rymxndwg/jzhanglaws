@@ -155,7 +155,8 @@ if (getLanguage() == 'English') {
 function languageController(curLanguage) {
     //Get Page Name
     let curPathName = window.location.pathname;
-    curPathName = curPathName.slice(1, -5);
+    //Use 12 if on github url, else use 1 for Local Server
+    curPathName = curPathName.slice(12, -5);
 
     if (curLanguage == 'Chinese') {
         loadHeaderChinese();
